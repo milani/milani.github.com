@@ -1,35 +1,37 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+---
+layout: front
+---
 
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
-
-    <title>Milani.github.com by milani</title>
-  </head>
-
-  <body>
-
-    <header>
-      <div class="container">
-        <h1>Milani.github.com</h1>
-        <h2>my blog</h2>
-
-        <section id="downloads">
-          <a href="https://github.com/milani" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
-        </section>
-      </div>
-    </header>
-
-    <div class="container">
-      <section id="main_content">
-        <p>My blog</p>
-      </section>
-    </div>
-
-    
-  </body>
-</html>
+<section class="posts">
+{% for post in paginator.posts %}
+<article class="post">
+  <h1>{{ post.title }}</h1>
+  <div class="info">{{post.date | date_to_long_string}} | <a href="{{post.url}}" title="Opens in new page">Permalink</a> | <a href="{{post.url}}#disqus_thread">Comments</a></div>
+  {{ post.content }}
+</article>
+{% endfor %}
+</section>
+<div class="pager">
+  {% if paginator.previous_page %}
+  <li class="previous">
+    {% if paginator.previous_page == 1 %}
+    <a href="/">&larr; Older</a>
+    {% else %}
+    <a href="/page{{paginator.previous_page}}">&larr; Older</a>
+    {% endif %}
+  </li>
+  {% else %}
+  <li class="previous disabled">
+    <a href="#">&larr; Older</a>
+  </li>
+  {% endif %}
+  {% if paginator.next_page %}
+  <li class="next">
+    <a href="/page{{paginator.next_page}}">Newer &rarr;</a>
+  </li>
+  {% else %}
+  <li class="next disabled">
+    <a href="#">Newer &rarr;</a>
+  </li>
+  {% endif %}
+</div>

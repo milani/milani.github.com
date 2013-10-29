@@ -1,0 +1,77 @@
+//
+// Utility classes
+// --------------------------------------------------
+
+
+// Quick floats
+.pull-right {
+  float: right;
+}
+.pull-left {
+  float: left;
+}
+
+// Toggling content
+.hide {
+  display: none;
+}
+.show {
+  display: block;
+}
+
+// Visibility
+.invisible {
+  visibility: hidden;
+}
+
+// For Affix plugin
+.affix {
+  position: fixed;
+}
+
+.clear-fix{
+  .clearfix();
+}
+
+// Override buttons
+.btn {
+  border-radius:0;
+  background-image:none;
+  border:none;
+  background-color:#c5c5c5;
+  text-shadow:none;
+  color:#333;
+}
+
+.btn-large {
+  font-size:16px;
+  padding:10px 15px;
+}
+
+.btn-primary {
+  background-color:@blue;
+  color:@white;
+
+  &:hover {
+    background-color:lighten(@blue, 5%);
+  }
+
+  &:active {
+    background-color:darken(@blue, 5%);
+    .box-shadow(none);
+  }
+}
+
+.btn-warning {
+  background-color:@orange;
+  color:@white;
+
+  &:hover {
+    background-color:lighten(@orange, 3%);
+  }
+
+  &:active {
+    background-color:darken(@orange, 5%);
+    .box-shadow(none);
+  }
+}

@@ -1,0 +1,6 @@
+{% assign url = page.url|remove:'/index.html' %}
+<ul class="nav pull-right">
+{% for p in site.navigation %}
+<li {% if p.url == url or (p.url == '/' and url == '') %}class="active"{% endif %}><a href="{{ p.url }}" title="{{ p.alt }}">{{ p.title }}</a></li>
+{% endfor %}
+</ul>

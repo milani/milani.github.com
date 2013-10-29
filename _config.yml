@@ -1,0 +1,38 @@
+safe:        false
+auto:        false
+server:      false
+server_port: 4001
+port: 4001
+baseurl:    /
+url: http://milani.github.io
+
+source:      .
+destination: ./_site
+plugins:     ./_plugins
+
+future:      true
+lsi:         false
+pygments:    true
+paginate:    3
+markdown:    maruku
+permalink:   /blog/:year/:month/:title
+
+maruku:
+  use_tex:    true
+  use_divs:   false
+  png_engine: blahtex
+  png_dir:    img/latex
+  png_url:    /img/latex
+
+exclude:
+-  less
+-  less3
+-  Makefile
+
+navigation:
+- title: Home
+  url:   /
+  alt: "Go to blog home"
+- title: About
+  url:   /about
+  alt: "Read about author"

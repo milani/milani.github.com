@@ -1,0 +1,80 @@
+/*!
+ * Bootstrap v2.1.1
+ *
+ * Copyright 2012 Twitter, Inc
+ * Licensed under the Apache License v2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Designed and built with all the love in the world @twitter by @mdo and @fat.
+ */
+
+// CSS Reset
+@import "reset.less";
+
+// Core variables and mixins
+@import "variables.less"; // Modify this for custom colors, font-sizes, etc
+@import "mixins.less";
+@import "component-animations.less";
+
+// Grid system and page structure
+@import "scaffolding.less";
+@import "grid.less";
+@import "layouts.less";
+
+// Base CSS
+@import "fonts.less";
+@import "type.less";
+
+// Navigation
+@import "navs.less";
+@import "navbar.less";
+@import "pager.less";
+
+// Components: Buttons & Alerts
+@import "buttons.less";
+
+// Components: Popovers
+@import "popovers.less";
+
+// Utility classes
+@import "utilities.less";
+
+// Home page and other static pages
+.navbar {
+	margin-top:10px;
+}
+
+.container {
+	section {
+		margin-bottom:40px;
+
+		article {
+			padding-bottom:20px;
+			margin-bottom:20px;
+
+			.info {
+				font-size:14px;
+				margin-top:-10px;
+				margin-bottom:10px;
+				.muted();
+				a {
+					color: @grayLight;
+					text-decoration:underline;
+				}
+			}
+
+			.backhome {
+				margin-top:20px;
+			}
+
+		}
+
+	}
+}
+
+footer {
+	width:100%;
+	background:@grayLighter;
+	border-top:1px solid darken(@grayLighter,10%);
+	padding:20px 0;
+}
