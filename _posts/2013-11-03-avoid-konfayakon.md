@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Avoid Konfayakon
-description: Avoid Major Refactors as much as possible
+description: Avoid Konfayakon (Major Refactors) as much as possible
 ---
 
 *Konfayakon* is a term we use at [Pichak](http://pichak.co) to refer to major refactors.
