@@ -4,7 +4,7 @@ server:      false
 server_port: 4001
 port: 4001
 baseurl:    /
-url: http://milani.github.io
+url: http://milani.blog
 
 source:      .
 destination: ./_site
@@ -12,7 +12,6 @@ plugins:     ./_plugins
 
 future:      true
 lsi:         false
-pygments:    true
 paginate:    3
 markdown:    maruku
 permalink:   /blog/:year/:month/:title
