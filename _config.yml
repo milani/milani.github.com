@@ -13,7 +13,6 @@ plugins:     ./_plugins
 future:      true
 lsi:         false
 paginate:    3
-markdown:    maruku
 permalink:   /blog/:year/:month/:title
 
 maruku:
